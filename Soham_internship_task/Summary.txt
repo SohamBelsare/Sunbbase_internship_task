@@ -1,0 +1,46 @@
+Approach:
+
+
+    1) Data preprocessing 
+    2) finding  and handling null values (done in preprocessing.ipynb file)
+ 
+ 
+1)Data Loading and Preprocessing:
+Load your dataset using pd.read_csv('your_dataset.csv').
+Apply label encoding to 'Gender' and 'Location' columns to convert them into numerical format using LabelEncoder.
+Define your feature matrix X and the target variable y.
+Standardize the numerical features using StandardScaler.
+
+2)Data Splitting:
+Split your data into training and testing sets using train_test_split to have a portion of data reserved for model evaluation.
+Logistic Regression Model:
+
+Initialize a logistic regression model using LogisticRegression().
+Use cross-validation (cross_val_score) to assess the model's accuracy.
+Calculate the mean accuracy over the cross-validation folds.
+
+3)Random Forest Model:
+Initialize a random forest classifier using RandomForestClassifier().
+Use cross-validation to assess the random forest model's accuracy.
+Calculate the mean accuracy over the cross-validation folds.
+
+4)Neural Network Model:
+Define a simple neural network architecture using TensorFlow/Keras.
+Compile the model with the appropriate optimizer, loss function, and metrics.
+Use StratifiedKFold for cross-validation.
+Train the neural network on the training data for a specified number of epochs and batch size.
+Evaluate the model on the validation set.
+Calculate the mean accuracy over the cross-validation folds.
+
+5)Model Comparison:
+Compare the accuracies of the three models.
+Determine the best model based on the highest accuracy.
+
+6)Final Model Selection:
+The best model is the one with the highest accuracy among logistic regression, random forest, and the neural network.
+
+7)Model Tuning and Optimization:
+Depending on the performance, you may need to tune hyperparameters, adjust the neural network architecture, or apply feature engineering techniques to further improve the model.
+
+8)Use the Best Model for Prediction:
+Once you've determined the best model, you can use it to make predictions on new data to predict churn.
